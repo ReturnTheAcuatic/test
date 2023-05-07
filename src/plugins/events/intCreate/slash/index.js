@@ -1,6 +1,4 @@
-import { d } from "././"
-
-const int = async (int, client) => {
+const int = async (int, session) => {
   return () => {
     if(!int.isCommand()) {
       const cmd = client.slash.get(int.commandName);
@@ -15,4 +13,4 @@ const int = async (int, client) => {
   }
 }
 
-export { msg };
+export { int }

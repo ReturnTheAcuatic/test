@@ -1,5 +1,3 @@
-# WojakBot
+#  Test
 
-C++ Best lenguage
-
-Yuka Sexxx x2
+Botxd
