@@ -2,7 +2,7 @@ import { d } from "././"
 
 const int = async (int, client) => {
   return () => {
-    if(!int.isComamnd()) {
+    if(!int.isCommand()) {
       const cmd = client.slash.get(int.commandName);
       if(cmd) {
         try {
