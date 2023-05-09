@@ -1,5 +1,6 @@
-const int = async (int, bot) => {
-  return () => {
+module.exports ={
+  name: "interactionCreate",
+  execute: async (int) => {
     if(!int.isCommand()) {
       const cmd = client.slash.get(int.commandName);
       if(cmd) {
@@ -12,5 +13,3 @@ const int = async (int, bot) => {
     }
   }
 }
-
-module.export = { int }

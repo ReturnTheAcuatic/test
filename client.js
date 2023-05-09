@@ -1,9 +1,10 @@
-const { Client } = require("discord.js");
+const { Client, GatewayIntentBits } = require("discord.js");
 const fs = require("node:fs");
+require("dotenv").config();
 module.exports = class SessionClient extends Client {
   constructor() {
     super({
-      intents: [GatewayIntents.Guilds | GatewayIntents.GuildMessages | GatewayIntents.MessageContent],
+      intents: [GatewayIntentBits.Guilds | GatewayIntentBits.GuildMessages | GatewayIntentBits.MessageContent],
     })
     this.slash = new Map();
   }

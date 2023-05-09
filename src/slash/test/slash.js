@@ -1,4 +1,4 @@
-export class commands {
+class commands {
   toJSON() {
     return {
       name: "test",
@@ -10,3 +10,5 @@ export class commands {
     int.respond({ content: "testxd" })
   }
 }
+
+module.exports = commands
