@@ -1,9 +1,11 @@
-import { SessionClient } from "./client.js";
-import { Load } from "./lib/plugins/commands/index.js";
-const session = new SessionClient();
+const { loadSlash } = require("./src/lib/plugins/commands/index.js");
+const { SessionClient } = require("./client.js");
+const Bot = new SessionClient();
 
-Load(session);
+async function setup() {
+  await loadSlash(Bot);
+  
+  await Bot.login(process.env.token);
+}
 
-session.events.on("interactionCreate", (int) => int(int, session));
-
-session.start();
+setup();

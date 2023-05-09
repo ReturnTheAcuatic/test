@@ -1,4 +1,4 @@
-const int = async (int, session) => {
+const int = async (int, bot) => {
   return () => {
     if(!int.isCommand()) {
       const cmd = client.slash.get(int.commandName);
@@ -13,4 +13,4 @@ const int = async (int, session) => {
   }
 }
 
-export { int }
+module.export = { int }
